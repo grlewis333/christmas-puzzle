@@ -58,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.</p>
     
-      <script>
+<!--       <script>
     function calc(){
     var num1 = document.getElementById("in1").value;
     var num2 = document.getElementById("in2").value;
@@ -72,9 +72,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   <input id="in2" type="number"/>
 
   <button onclick="calc()">Calculate</button>
-  <p></p> 
-    
+  <p></p>  -->
 
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter a value">
+
+    <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
     
   </div>
 </div>
@@ -124,6 +126,33 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+  
+
+function evaluate_answer()			
+      {
+        var opgegevenAntwoord, antwoord, i;
+        opgegevenAntwoord = document.getElementById("demo-name").value;
+        antwoord = ["Transfiguration", "transfiguration", "TRANSFIGURATION"];
+        for (i = 0; i < antwoord.length; i++)
+        {
+
+          if (antwoord.includes(opgegevenAntwoord))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Maybe leave navigation to someone else? Try again.");
+              break;
+            }
+        }
+      }
+    function redirect()
+      {
+        window.location = "hallway.html";
+      }
+      
 </script>
 
 </body>
