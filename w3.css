@@ -234,3 +234,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 body_bi {
  background-image: url("images/christmas-background-tiles162.jpg");
 }
+
+#trees {
+  height: 150px;
+  background-image: url("images/christmas-background-tiles162.jpg");
+}
