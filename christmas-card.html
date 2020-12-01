@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>Christmas card</h1>
+
+      <p class="w3-text-grey">A letter has just come through the door. You are both intrigued and a bit worried when you see the sender: your aunt Hilda. This year is her turn to host the Christmas dinner. It has been a tradition for a while now to go all together to a rented house to spend the holidays and you’ve been taking turns to organise the location. Your aunt is known for her eccentricity and love for tricks and puzzles. One year she even managed to make your grandpa disappear for one hour as part of a failed magic trick!</p>
+
+<p class="w3-text-grey">Hence the expectation when you are opening her Christmas card…
+</p>
+
+
+
+  <div class="w3-content">
+    <img src="images/Xmas_Card.png" alt="Cute Christmas Card" id="imgClickAndChange" onclick="changeImage()">
+  </div>
+  
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Who's not lying?'">
+
+    <input type="button" id="myBtn" value="Check answer" class="primary" onclick="evaluate_answer()">
+  </div>
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["Charlie", "charlie", "CHARLIE"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Uh-oh! That's incorrect. I hope you're not just trying all of the names!");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "main-room.html";
+  }
+
+// Change image on click
+function changeImage() {
+
+        if (document.getElementById("imgClickAndChange").src == "images/Xmas_Card.png") 
+        {
+            document.getElementById("imgClickAndChange").src = "images/card_text.png";
+        }
+        else 
+        {
+            document.getElementById("imgClickAndChange").src = "images/Xmas_Card.png";
+        }
+    }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
