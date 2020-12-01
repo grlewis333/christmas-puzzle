@@ -31,7 +31,7 @@ $(function(){
 
 
   <div class="w3-content">
-    <img src="images/Xmas_Card.png" alt="Cute Christmas Card" id="imgClickAndChange" onclick="changeImage()" class="w3-image">
+    <img src="images/Xmas_Card.png" alt="Cute Christmas Card" id="imgClickAndChange" onclick="changeImage()" class="w3-image" width="600">
   </div>
 
   <br>
@@ -78,6 +78,9 @@ function redirect()
     window.location = "main-room.html";
   }
 
+
+</script>
+<script language="javascript">
 // Change image on click
 function changeImage() {
 
@@ -90,8 +93,7 @@ function changeImage() {
             document.getElementById("imgClickAndChange").src = "images/Xmas_Card.png";
         }
     }
-      
-</script>
+  </script>    
 
 </body>
 </html>
