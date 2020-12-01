@@ -31,7 +31,7 @@ $(function(){
 
 
   <div class="w3-content">
-    <img src="images/Xmas_Card.png" alt="Cute Christmas Card" id="toggleImage" onclick="toggleImage();" class="w3-image" width="600" onmouseover="" style="cursor: pointer;"/>
+    <img src="images/Xmas_Card.png" alt="Cute Christmas Card" id="toggleImage" onclick="toggleImage1();" class="w3-image" width="600" onmouseover="" style="cursor: pointer;"/>
   </div>
 
   <br>
@@ -79,22 +79,17 @@ function redirect()
   }
 
 // Change image on click
-function toggleImage() {
-   var img1 = "images/Xmas_Card.png";
-   var img2 = "images/card_text.png";
-   
-   var imgElement = document.getElementById('toggleImage');
+  function toggleImage1() {
 
-if (document.getElementById("toggleImage").src =="images/Xmas_Card.png") 
-        {
-            document.getElementById("toggleImage").setAttribute("src", "images/card_text.png");
-        }
-        else 
-        {
-            document.getElementById("toggleImage").setAttribute("src", "images/Xmas_Card.png");
-        }
-    }
-}
+  document.getElementById("toggleImage").setAttribute("src", "images/card_text.png");
+  document.getElementById("toggleImage").setAttribute("onclick", "toggleImage2()");
+  }
+
+  function toggleImage2() {
+
+  document.getElementById("toggleImage").setAttribute("src", "images/Xmas_Card.png");
+  document.getElementById("toggleImage").setAttribute("onclick", "toggleImage1()");
+  }
 
 </script>    
 
