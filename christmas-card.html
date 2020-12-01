@@ -85,9 +85,15 @@ function toggleImage() {
    
    var imgElement = document.getElementById('toggleImage');
 
-   imgElement.src = (imgElement.src === img1)? img2 : img1;
-
-   alert("Uh-oh! That's incorrect. I hope you're not just trying all of the names!");
+if (document.getElementById("toggleImage").src =="images/Xmas_Card.png") 
+        {
+            document.getElementById("toggleImage").setAttribute("src", "images/card_text.png");
+        }
+        else 
+        {
+            document.getElementById("toggleImage").setAttribute("src", "images/Xmas_Card.png");
+        }
+    }
 }
 
 </script>    
