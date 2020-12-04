@@ -239,3 +239,8 @@ body_bi {
   height: 100px;
   background-image: url("images/christmas-background-tiles162.jpg");
 }
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
