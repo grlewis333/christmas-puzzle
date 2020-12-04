@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>Main heading</h1>
+      <h5 class="w3-padding-32">Sub heading</h5>
+
+      <p class="w3-text-grey">Main text for the page.</p>
+
+      <div class="w3-content">
+    <img src="images/puzzle-room.png" alt="Room of puzzles" class="w3-image" width="600" usemap="#workmap" />
+
+    <map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" onmouseover="" style="cursor: pointer;">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" onmouseover="" style="cursor: pointer;">
+  <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm" onmouseover="" style="cursor: pointer;">
+</map>
+
+     </div>
+
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
+
+    <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
+  </div>
+  
+    <div class="w3-content">
+    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Continue</a>  
+  </div>
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["Correct", "correct", "CORRECT"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Incorrect answer, try again!");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "next_page.html";
+  }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
