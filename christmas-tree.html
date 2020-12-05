@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>The garden lamp puzzle</h1>
+
+      <p class="w3-text-grey">When you look closer at the christmas tree, you find a note hidden next to one of the strangely shaped ornaments...</p>
+
+      <p class="w3-text-grey"><i>Help me find out how many lamps I need to bring down from the loft to put in the garden! I've drawn a map below to help you but there are some rules! One lamp casts light on the column and row where it sits. The hedges and trees stop the light from traveling further. One lamp cannot cast light on another lamp (this will not be very efficient electricity use!). Some trees have numbers on top of them, the number signify the number of lamps sitting around the tree, in horizontal or vertical, not diagonal. Light up the whole garden!</i></p>
+
+      <div class="w3-content center">
+    <img src="images/akari.png" alt="Garden lamp map" class="w3-image center" width="800"/>
+</div>
+
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="How many lamps are needed?">
+
+    <div class="w3-content">
+    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Continue</a>  
+  </div>
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["21", "twenty one", "TWENTY ONE", "Twenty One", "Twenty one"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              if (window.confirm('My garden will look perfect with this number! Maybe make a note of that number...')) 
+{
+window.location.href='puzzle-room.html';
+};
+
+              break;
+
+            }
+          else  
+            {
+              alert("How would my garden look stunning with that number of lamps!? Try again.");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "next_page.html";
+  }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
