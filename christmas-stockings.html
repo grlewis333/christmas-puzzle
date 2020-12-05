@@ -21,12 +21,16 @@ $(function(){
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
    
-      <h1>Main heading</h1>
-      <h5 class="w3-padding-32">Sub heading</h5>
+      <h1>Christmas stockings</h1>
 
-      <p class="w3-text-grey">Main text for the page.</p>
-
-    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
+      <p class="w3-text-grey">You all know my love for our furry little friends, so what a delight it was to find this amazing cat fabric! I am determined to use some in each of my stockings! What is the area in cm2 that each stocking will contain?
+        <br>
+(P.S. There is an immensely more satisfying way to figure this one out than by using fractions… so, come on, make your aunt proud and try to not use any fractions… you’ll thank me at the end ;P )</p>
+ <div class="w3-content center">
+    <img src="images/stocking.png" alt="Stocking" class="w3-image center" width="500"/>
+</div>
+<br>
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Cat fabric area">
 
     <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
   </div>
@@ -45,22 +49,27 @@ $(function(){
   
 <script>  
 // Check if answer is correct or not
-function evaluate_answer()			
+function evaluate_answer()      
       {
         var user_answer, true_answer, i;
         user_answer = document.getElementById("demo-name").value;
-        true_answer = ["Correct", "correct", "CORRECT"];
+        true_answer = ["21", "twenty one", "TWENTY ONE", "Twenty One", "Twenty one"];
         for (i = 0; i < true_answer.length; i++)
         {
 
           if (true_answer.includes(user_answer))
             {
-              redirect();
+              if (window.confirm('This is exactly what I need to finish my stockings masterpiece!')) 
+{
+window.location.href='puzzle-room.html';
+};
+
+              break;
 
             }
           else  
             {
-              alert("Incorrect answer, try again!");
+              alert("That would make a very funny shaped stocking...");
               break;
             }
         }
