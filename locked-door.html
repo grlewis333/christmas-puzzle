@@ -21,10 +21,16 @@ $(function(){
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
    
-      <h1>Main heading</h1>
-      <h5 class="w3-padding-32">Sub heading</h5>
+      <h1>Door code</h1>
 
-      <p class="w3-text-grey">Main text for the page.</p>
+      <p class="w3-text-grey">You notice a small note sitting by the control panel for the door...</p>
+
+      <p class="w3-text-grey"><i>Aaah this is a family favourite by now! I have been trying to teach all how to play this one by sneaking it in at every reunion... This time with a twist, as you will need to form a word with the letters associated with each picture. Use this word and the door will open up! I'll give you two clues: Hat-3 and Plant-6!</i></p>
+
+             <div class="w3-content center">
+    <img src="images/codenames.png" alt="Code names" class="w3-image center" width="700"/>
+</div>
+<br>
 
     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
 
@@ -49,18 +55,23 @@ function evaluate_answer()
       {
         var user_answer, true_answer, i;
         user_answer = document.getElementById("demo-name").value;
-        true_answer = ["Correct", "correct", "CORRECT"];
+        true_answer = ["Snowflake", "snowflake", "SNOWFLAKE"];
         for (i = 0; i < true_answer.length; i++)
         {
 
           if (true_answer.includes(user_answer))
             {
-              redirect();
+              if (window.confirm("The door opens and behind it you find Hilda's cat eating a pile of candy! 'Whiskers! What are you doing here! You are too much of a sweet tooth! We will bring you back to the party, Hilda must be worried about you.' - You try to convince the cat to come with you while sneaking some candies in the bag for later.")) 
+{
+window.location.href='puzzle-room.html';
+};
+
+              break;
 
             }
           else  
             {
-              alert("Incorrect answer, try again!");
+              alert("Hmmm, maybe you need a hint for this one...?");
               break;
             }
         }
