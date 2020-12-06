@@ -21,19 +21,22 @@ $(function(){
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
    
-      <h1>Main heading</h1>
-      <h5 class="w3-padding-32">Sub heading</h5>
+      <h1>Around the globe</h1>
 
-      <p class="w3-text-grey">Main text for the page.</p>
+      <p class="w3-text-grey">Inside the globe you find another message!</p>
 
-    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
+      <p class="w3-text-grey"><i>Have I already introduced you to my travelling group? I must have! Agatha, Charlie, Lee and I are always arguing but we always have a good time. This year we had totally different ideas of where to go for our annual trip. We all tried to persuade the others by bringing the best pictures of our favourite destinations we could find. At the end we decided to do some good old compromising and meet exactly in the middle!</i></p>
 
-    <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
+       <div class="w3-content center">
+    <img src="images/global.png" alt="Map and photos" class="w3-image center" width="700"/>
+</div>
+<br>
+
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Destination grid">
+
+    <input type="button" id="myBtn" value="Check answer" class="primary" onclick="evaluate_answer()">
   </div>
-  
-    <div class="w3-content">
-    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Continue</a>  
-  </div>
+
   
 </div>
 
@@ -45,22 +48,27 @@ $(function(){
   
 <script>  
 // Check if answer is correct or not
-function evaluate_answer()			
+function evaluate_answer()      
       {
         var user_answer, true_answer, i;
         user_answer = document.getElementById("demo-name").value;
-        true_answer = ["Correct", "correct", "CORRECT"];
+        true_answer = ["CB 45", "CB45", "cb 45", "cb45", "Cb 45", "Cb45"];
         for (i = 0; i < true_answer.length; i++)
         {
 
           if (true_answer.includes(user_answer))
             {
-              redirect();
+              if (window.confirm('Yes! What a great Turkey holiday we will have.  &#129411 ')) 
+{
+window.location.href='puzzle-room.html';
+};
+
+              break;
 
             }
           else  
             {
-              alert("Incorrect answer, try again!");
+              alert("I don't think so, we went there last year and I'm not sure we're welcome back!...");
               break;
             }
         }
