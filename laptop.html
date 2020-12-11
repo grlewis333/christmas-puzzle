@@ -27,13 +27,13 @@ myDIV{display: none;}
    
       <h1>Christmas Fridays!</h1>
 
-      <p class="w3-text-grey">Everyone loves the Christmas holidays and everyone loves Fridays. This year the 25th will be double the trouble as it is both! So, with all of this time I’ve been having lately working from home, I’ve been wondering how many times has this wonderful occurrence taken place since 1225, the ultimate Christmas year. <br>
-      I have also had time to learn how to code in the meantime… it is so much easier to let the computer do the hard work… <br>
+      <p class="w3-text-grey">Everyone loves the Christmas holidays and everyone loves Fridays. This year the 25th will be double the trouble as it is both! So, with all of this time I’ve been having lately working from home, I’ve been wondering how many times has this wonderful occurrence taken place since 1225, the ultimate Christmas year. <br><br>
+      I have also had time to learn how to code in the meantime… it is so much easier to let the computer do the hard work… <br><br>
       For those of you who are adventurous enough to figure it out on your own, go ahead (just pretend the Gregorian calendar always existed...). Otherwise though, click the button below to get started.</p>
 
 <input type="button" id="myBtn2" value="Click for a bit of help" class="primary" onclick="toggle_div()">
 
-<div id="myDIV">
+<div id="myDIV" style='display: none'>
 
 
 
@@ -63,15 +63,12 @@ myDIV{display: none;}
 <script>  
   // Show/hide div   
 function toggle_div() {
-  alert("Ndsdasde!")
   var x = document.getElementById("myDIV");
   
   if (x.style.display === "none") {
     x.style.display = "block";
-    alert("Not quite!")
   } else {
     x.style.display = "none";
-    alert("Not !")
   }
 }
 // Check if answer is correct or not
