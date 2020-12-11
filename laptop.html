@@ -22,19 +22,31 @@ $(function(){
   <div class="w3-content">
    
       <h1>Christmas Fridays!</h1>
-      <p class="w3-text-grey">Main text for the page.</p>
+
+      <p class="w3-text-grey">Everyone loves the Christmas holidays and everyone loves Fridays. This year the 25th will be double the trouble as it is both! So, with all of this time I’ve been having lately working from home, I’ve been wondering how many times has this wonderful occurrence taken place since 1225, the ultimate Christmas year. <br>
+      I have also had time to learn how to code in the meantime… it is so much easier to let the computer do the hard work… <br>
+      For those of you who are adventurous enough to figure it out on your own, go ahead (just pretend the Gregorian calendar always existed...). Otherwise though, click the button below to get started.</p>
+
+<button onclick="myFunction()">Start here for a bit of assistance!</button>
+
+<div id="myDIV">
+
+
+
+      <p class="w3-text-grey">Below I have some unfinished code to help you with the puzzle... I had a mind-blank when writing the start of it! See if you can replace the blanks, which look like '###____###', and don't worry about the middle bit! <br><br> My code is on the left hand side, when you think you've filled it in, press 'Run', and the answer will appear on the right hand side!
+      </p>
 
       <iframe src="https://trinket.io/embed/python/097ff59e8a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+    </div>
+
       <br>
 
-    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="No. of Christmas Fridays">
 
     <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
   </div>
   
-    <div class="w3-content">
-    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Continue</a>  
-  </div>
   
 </div>
 
@@ -50,18 +62,23 @@ function evaluate_answer()
       {
         var user_answer, true_answer, i;
         user_answer = document.getElementById("demo-name").value;
-        true_answer = ["Correct", "correct", "CORRECT"];
+        true_answer = ["115"];
         for (i = 0; i < true_answer.length; i++)
         {
 
           if (true_answer.includes(user_answer))
             {
-              redirect();
+              if (window.confirm("Well done for working out the right answer! Now if you are so good with computers and technology… why don’t you spent some time explaining your granma how to video call us?")) 
+{
+window.location.href='puzzle-room.html';
+};
+
+              break;
 
             }
           else  
             {
-              alert("Incorrect answer, try again!");
+              alert("Not quite!");
               break;
             }
         }
@@ -72,7 +89,17 @@ function redirect()
   {
     window.location = "next_page.html";
   }
-      
+  
+// Show/hide div   
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 </script>
 
 </body>
