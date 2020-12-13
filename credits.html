@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>Thanks for playing!</h1>
+      <h3> Creators </h3>
+      <p class="w3-text-grey"><strong>Laura Pascual</strong> - Witty writing, puzzle ingenuity, and source of sanity!</p>
+      <p class="w3-text-grey"><strong>George Lewis</strong> - Neverendig enthusiasm to make a 'project', puzzle making, and most amazing wedsite builder from not knowing what a website was to this incredible interactive site in 1 month!</p>
+      <p class="w3-text-grey"><strong>Louisa Wong</strong> - Incredible artwork used in the <a href='christmas-card.html'>Christmas Card</a>. We will soon set up a donation site for you to buy a 'fruit company that shall not be named' pen ;)</p>
+
+      <h3> Inspiration </h3>
+      <ul>
+        <li>Can you solve my problems? - Book by Alex Bellos</li>
+        <li>Giant Logic Puzzles for Geniuses - Book by Nikoli</li>
+        <li>Codenames - Boardgame by Vlaada Chvatil</li>
+        <li><a href='https://www.geoguessr.com/'>GeoGuessr</a> - Location guessing game</li>
+        <li><a href='https://projecteuler.net/'>Project Euler</a> - Coding puzzles</li>
+        <li><a href='https://www.thehogwartsescape.com/index.html'>The Hogwarts Escape</a> - Harry Potter themed escape room</li>
+      </ul>  
+
+  </div>
+  
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["Correct", "correct", "CORRECT"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Incorrect answer, try again!");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "next_page.html";
+  }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
