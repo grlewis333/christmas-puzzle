@@ -27,7 +27,7 @@ $(function(){
       <p class="w3-text-grey">Main text for the page.</p>
 
         <div class="w3-content center">
-    <img src="images/address_book/0.png" id="toggleImage" alt="Address book" class="w3-image center" width="700"/>
+    <img src="images/address_book/0.png" id="toggleImage" alt="Address book" class="w3-image center" width="900"/>
   </div>
 
   <br>
@@ -103,8 +103,11 @@ function redirect()
 
 // Change image on click
   function toggleImage() {
+    var user_page,;
+        user_page = document.getElementById("pages").value;
 
-  document.getElementById("pages")
+    alert("user_page")
+
   document.getElementById("toggleImage").setAttribute("src", "images/address_book/2.png");
   }
 
