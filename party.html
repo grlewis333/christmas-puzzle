@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>You made it!</h1>
+
+      <p class="w3-text-grey">Yes! You’ve made it! You now have a complete address and you are hoping very hard that this will correctly lead you to your aunt’s party. The location is not very far, you all get back into your cars and drive to the address while listening to Christmas classics. Your tummy rumbles – ‘I hope they have left some croquettes for me!’.</p>
+
+      <p class="w3-text-grey">You arrive to the address and walk towards the front door of the house. You can see warm light on the inside. There is a wonderful smell and laughter coming from the house. Your aunt finally appears at the door and hugs you all so tightly you cannot move! You notice something cold landing on your nose and your cousin Tim screaming: ‘it’s snowing! Look it’s snowing!’</p>
+
+      <p class="w3-text-grey">Everyone from the inside rushes to the door and as you all look at the sky, with your family and friends around you, you know this year will also be a very merry Christmas.</p>
+
+  </div>
+        <div class="w3-content center">
+    <img src="images/cosy-house.png" alt="Cosy house" class="w3-image center" width="800"/>
+</div>
+  <br>
+    <div class="w3-content">
+    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Credits</a>  
+  </div>
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["Correct", "correct", "CORRECT"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Incorrect answer, try again!");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "next_page.html";
+  }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
