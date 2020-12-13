@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel='shortcut icon' href='favicon.ico' />
+</head>
+  
+<script> 
+$(function(){
+  $("#header").load("header.txt"); 
+  $("#footer").load("footer.txt"); 
+});
+</script> 
+  
+<div id="header"></div>
+  
+<!--  Everything above this is needed for the page to run properly  -->
+  
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+   
+      <h1>Christmas card</h1>
+
+            <ol>
+        <li>Did you try clicking the picture?</li>
+        <li>One person is telling the truth</li>
+      </ol>  
+
+      <h1>Puzzle room</h1>
+
+            <ol>
+        <li>Try exploring the room... (Click on different parts of the image!)</li>
+      </ol>  
+
+      <h1>Christmas tree</h1>
+
+            <ol>
+        <li>You might want to copy down the puzzle onto paper!</li>
+        <li><a href='https://www.nikoli.co.jp/iphone/en/bj_tutorial.html'>Akari rules</a>: A) Light bulbs may be placed in any of the grass squares, the number in the square shows how many light bulbs are next to it, vertically and horizontally. B) Each light bulb illuminates from bulb to tree square or outer frame in its row and column. C) Every grass square must be illuminated and a light bulb can not illuminate another light bulb.</li>
+        <li>Start with the 4!</li>
+      </ol>  
+
+      <h1>Stockings</h1>
+
+      <ol>
+        <li>Try drawing a rectangle around the stocking, what about the missing space?</li>
+      </ol>  
+
+      <h1>Door code</h1>
+
+      <ol>
+        <li>This puzzle is based on codenames, where with each clue you describe x images on the board using a single word. For example
+        the clue 'bow-3' refers to three pictures related to the word 'bow'.</li>
+        <li>The correct images correspond to an anagram of their corresponding letters. The anagram is a Christmassy word!</li>
+      </ol> 
+
+      <h1>Globe</h1>
+
+      <ol>
+        <li>Try to google details of the images if you don't know where they are!</li>
+        <li>The answer is at the middle of a cross formed by their locations.</li>
+      </ol>
+
+      <h1>Laptop</h1>
+
+      <ol>
+        <li>Leap year rule: Every year that is exactly divisible by four is a leap year, except for years that are exactly divisible by 100, but these centurial years are leap years if they are exactly divisible by 400. For example, the years 1700, 1800, and 1900 are not leap years, but the years 1600 and 2000 are.</li>
+        <li>There are 4 code blanks to change in the first function.</li>
+        <li>Look at the way previous code has been written for inspiration.</li>
+        <li>Remember to change the target year at the bottom of the code!</li>
+      </ol> 
+
+      <h1>Address book</h1>
+
+      <ol>
+        <li>Finish the other puzzles before you try this one - the answers are clues for this puzzle.</li>
+        <li>The page numbers are the first clue to get right!</li>
+      </ol>  
+
+
+
+  </div>
+  
+  
+</div>
+
+
+
+
+<!--  Leave this div here to load the footer  --> 
+<div id="footer"></div>
+  
+<script>  
+// Check if answer is correct or not
+function evaluate_answer()			
+      {
+        var user_answer, true_answer, i;
+        user_answer = document.getElementById("demo-name").value;
+        true_answer = ["Correct", "correct", "CORRECT"];
+        for (i = 0; i < true_answer.length; i++)
+        {
+
+          if (true_answer.includes(user_answer))
+            {
+              redirect();
+
+            }
+          else  
+            {
+              alert("Incorrect answer, try again!");
+              break;
+            }
+        }
+      }
+  
+// Go to next page if answer is correct 
+function redirect()
+  {
+    window.location = "next_page.html";
+  }
+      
+</script>
+
+</body>
+</html>
+
+
+ </body>
+</html>
