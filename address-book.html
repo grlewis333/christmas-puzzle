@@ -103,12 +103,15 @@ function redirect()
 
 // Change image on click
   function toggleImage() {
-    var user_page,;
+    var user_page,src_l,src_r,src_full;
         user_page = document.getElementById("pages").value;
+        src_l="images/address_book/";
+        src_r=".png"
+        src_full = src_l.concat(user_page.concat(src_r))
 
-    alert("user_page")
+    alert(src_full)
 
-  document.getElementById("toggleImage").setAttribute("src", "images/address_book/2.png");
+  document.getElementById("toggleImage").setAttribute("src", src_full);
   }
 
   function toggleImage2() {
