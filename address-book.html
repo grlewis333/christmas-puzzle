@@ -27,7 +27,7 @@ $(function(){
       <p class="w3-text-grey">Main text for the page.</p>
 
         <div class="w3-content center">
-    <img src="images/address_book/0.png" id="toggleImage" alt="Address book" class="w3-image center" width="900"/>
+    <img src="images/address_book/0.png" id="toggleImage" alt="Address book" class="w3-image center" width="1200"/>
   </div>
 
   <br>
@@ -50,18 +50,13 @@ $(function(){
     <option value="28">28/29</option>
     <option value="20">30/31</option>
   </select>
-  <br><br>
  <input type="button" id="myBtn" value="Go to page" class="primary" onclick="toggleImage()">
 
-  <br?
+  <br>
 
-    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
+    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter address">
 
-    <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
-  </div>
-  
-    <div class="w3-content">
-    <a href="template.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Continue</a>  
+    <input type="button" id="myBtn" value="Go to party!" class="primary" onclick="evaluate_answer()">
   </div>
   
 </div>
@@ -78,7 +73,7 @@ function evaluate_answer()
       {
         var user_answer, true_answer, i;
         user_answer = document.getElementById("demo-name").value;
-        true_answer = ["Correct", "correct", "CORRECT"];
+        true_answer = ["115 Snowflake Avenue, CB 45","115 snowflake avenue, cb 45"];
         for (i = 0; i < true_answer.length; i++)
         {
 
@@ -108,8 +103,6 @@ function redirect()
         src_l="images/address_book/";
         src_r=".png"
         src_full = src_l.concat(user_page.concat(src_r))
-
-    alert(src_full)
 
   document.getElementById("toggleImage").setAttribute("src", src_full);
   }
