@@ -27,7 +27,7 @@ $(function(){
       <p class="w3-text-grey">Main text for the page.</p>
 
         <div class="w3-content center">
-    <img src="images/address_book/0.png" alt="Address book" id="toggleImage" onclick="toggleImage1();" class="w3-image center" width="700" onmouseover="" style="cursor: pointer;" />
+    <img src="images/address_book/0.png" id="toggleImage" alt="Address book" class="w3-image center" width="700"/>
   </div>
 
   <br>
@@ -51,7 +51,7 @@ $(function(){
     <option value="20">30/31</option>
   </select>
   <br><br>
- <input type="button" id="myBtn" value="Go to page" class="primary" onclick="evaluate_answer()">
+ <input type="button" id="myBtn" value="Go to page" class="primary" onclick="toggleImage()">
 
   <br?
 
@@ -102,10 +102,10 @@ function redirect()
   }
 
 // Change image on click
-  function toggleImage1() {
+  function toggleImage() {
 
-  document.getElementById("toggleImage").setAttribute("src", "images/card_text.png");
-  document.getElementById("toggleImage").setAttribute("onclick", "toggleImage2()");
+  document.getElementById("pages")
+  document.getElementById("toggleImage").setAttribute("src", "images/address_book/2.png");
   }
 
   function toggleImage2() {
