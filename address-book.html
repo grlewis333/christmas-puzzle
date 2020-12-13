@@ -26,6 +26,35 @@ $(function(){
 
       <p class="w3-text-grey">Main text for the page.</p>
 
+        <div class="w3-content center">
+    <img src="images/address_book/0.png" alt="Address book" id="toggleImage" onclick="toggleImage1();" class="w3-image center" width="700" onmouseover="" style="cursor: pointer;" />
+  </div>
+
+  <br>
+  <label for="cars">Choose a page:</label>
+  <select name="pages" id="pages">
+    <option value="0">0/1</option>
+    <option value="2">2/3</option>
+    <option value="4">4/5</option>
+    <option value="6">6/7</option>
+    <option value="8">8/9</option>
+    <option value="10">10/11</option>
+    <option value="12">12/13</option>
+    <option value="14">14/15</option>
+    <option value="16">16/17</option>
+    <option value="18">18/19</option>
+    <option value="20">20/21</option>
+    <option value="22">22/23</option>
+    <option value="24">24/25</option>
+    <option value="26">26/27</option>
+    <option value="28">28/29</option>
+    <option value="20">30/31</option>
+  </select>
+  <br><br>
+ <input type="button" id="myBtn" value="Go to page" class="primary" onclick="evaluate_answer()">
+
+  <br?
+
     <input type="text" name="demo-name" id="demo-name" value="" placeholder="Enter correct">
 
     <input type="button" id="myBtn" value="Continue" class="primary" onclick="evaluate_answer()">
@@ -70,6 +99,19 @@ function evaluate_answer()
 function redirect()
   {
     window.location = "next_page.html";
+  }
+
+// Change image on click
+  function toggleImage1() {
+
+  document.getElementById("toggleImage").setAttribute("src", "images/card_text.png");
+  document.getElementById("toggleImage").setAttribute("onclick", "toggleImage2()");
+  }
+
+  function toggleImage2() {
+
+  document.getElementById("toggleImage").setAttribute("src", "images/Xmas_Card.png");
+  document.getElementById("toggleImage").setAttribute("onclick", "toggleImage1()");
   }
       
 </script>
